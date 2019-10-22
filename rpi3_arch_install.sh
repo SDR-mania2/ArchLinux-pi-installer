@@ -16,11 +16,11 @@ cd
 
 umount /dev/sda
 
-parted -s $SDCARD unit s print
-parted -s $SDCARD mktable msdos
-parted -s $SDCARD mkpart primary fat32 8192s 128MiB
-parted -s $SDCARD mkpart primary 128MiB 100%
-parted -s $SDCARD unit s print
+parted -s /dev/sda unit s print
+parted -s /dev/sda mktable msdos
+parted -s /dev/sda mkpart primary fat32 8192s 128MiB
+parted -s /dev/sda mkpart primary 128MiB 100%
+parted -s /dev/sda unit s print
 
 
 mkfs.vfat /dev/sda1
