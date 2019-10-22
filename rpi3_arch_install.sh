@@ -8,7 +8,7 @@
 #
 #
 
-#現在のディスク情報表示
+echo "現在のディスク情報を表示します。"
 fdisk -l
 
 #ホームディレクトリで作業する。絶対に/ディレクトリでは作業しないこと。
@@ -51,11 +51,11 @@ mv root/boot/* boot
 umount boot root
 
 #インストールは以上で完了です。リブートして以下を実行します。
-#pacman-key --init
-#pacman-key --populate archlinuxarm
-#pacman -Syu
+echo "pacman-key --initを実行してください"
+echo "pacman-key --populate archlinuxarmを実行してください"
+echo "pacman -Syuを実行してください"
 #これを実行しないとpacmanが使えません。
-とは
+
 #続いてLXDEをインストールします。
 #pacman -S xf86-video-fbdev lxde xorg-xinit dbus
 #ホームディレクトリに.xinitrcを作成します。
