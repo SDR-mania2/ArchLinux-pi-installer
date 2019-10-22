@@ -51,7 +51,10 @@ sync
 mv root/boot/* boot
 umount boot root
 
-#インストールは以上で完了です。リブートして以下を実行します。
+#インストールは以上で完了です。
+#カードリーダーを取り外し、ラズパイにSDカードをセットします。
+#ブートします。初期ユーザはalarm(パスワードalarm)とroot(パスワードroot)です。
+#ログイン後に以下を実行します。
 echo "pacman-key --initを実行してください"
 echo "pacman-key --populate archlinuxarmを実行してください"
 echo "pacman -Syuを実行してください"
