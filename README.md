@@ -2,6 +2,6 @@
 
 ## raspberry pi 3B+へのArch Linuxインストールスクリプト
 
-テスト中です。rpi3_arch_install.shをrootで実行してください。
+テスト中です。rpi3_arch_install.shをrootで実行してください。LXDE環境もインストールします。
 
 まだ動作の保証はできません。
