@@ -54,6 +54,7 @@ umount boot root
 #インストールは以上で完了です。
 #カードリーダーを取り外し、ラズパイにSDカードをセットします。
 #ブートします。初期ユーザはalarm(パスワードalarm)とroot(パスワードroot)です。
+#初期ユーザのパスワードは変更しておきましょう。
 #ログイン後に以下を実行します。
 echo "pacman-key --initを実行してください"
 echo "pacman-key --populate archlinuxarmを実行してください"
