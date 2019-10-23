@@ -49,23 +49,23 @@ then
   #GNUのtarでもいけるという情報がありますが、検証してません。bsdtarとGNUtarの違いに詳しくないので現時点では何ともいえません。
   #無視して続行してもインストールは可能です。
   #
-
+  sync
+  mv root/boot/* boot
+  umount boot root
 else
 sync
 mv root/boot/* boot
 umount boot root
+fi
 
 #インストールは以上で完了です。
 #カードリーダーを取り外し、ラズパイにSDカードをセットします。
 #ブートします。初期ユーザはalarm(パスワードalarm)とroot(パスワードroot)です。
 #初期ユーザのパスワードは変更しておきましょう。
 #ログイン後に以下を実行します。
-echo "ラズパイにSDカードをセットして起動してください"
-echo "pacman-key --initを実行してください"
-echo "pacman-key --populate archlinuxarmを実行してください"
-echo "pacman -Syuを実行してください"
+trap "echo 'ラズパイにSDカードをセットして起動してください\n pacman-key --initを実行してください\n pacman-key --populate archlinuxarmを実行してください\n pacman -Syuを実行してください'
+"EXIT
 #これを実行しないとpacmanが使えません。
-fi
 
 #続いてLXDEをインストールします。
 #pacman -S xf86-video-fbdev lxde xorg-xinit dbus
