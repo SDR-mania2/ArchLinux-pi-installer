@@ -53,9 +53,9 @@ then
   mv root/boot/* boot
   umount boot root
 else
-sync
-mv root/boot/* boot
-umount boot root
+  sync
+  mv root/boot/* boot
+  umount boot root
 fi
 
 #インストールは以上で完了です。
