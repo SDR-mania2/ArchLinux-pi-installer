@@ -68,3 +68,27 @@ echo "pacman -Syuを実行してください"
 #リブートします。
 
 #リブート後ログインしてstartxすればLXDEが起動します。
+
+#
+#
+#以下はLXDEの日本語環境設定です。
+#(1)キーマップ変更
+#loadkeys jp106
+#
+#(2)タイムゾーン設定
+#timedatectl set-timezone Asia/Tokyo
+#
+#(3)ロケール変更(LXDEメニューが日本語になります)
+#/etc/locale.confにLANG=ja_JP.UTF-8を書く。
+#
+#(4)日本語フォントのインストール
+#pacman -S otf-ipafont
+#
+#(5)mozcのインストール
+#pacman -S fcitx-im fcitx-configtool fcitx-mozc
+#
+#(6).xprofile作成
+#.xprofileを作成しfcitx設定を記述する
+#書き方はいろんなサイトに書いてあります。
+#
+#
