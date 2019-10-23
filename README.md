@@ -17,3 +17,5 @@
 <https://tomosoft.jp/design/?p=10356>
 
 <http://www.nspl.co.jp/blog/archlinux_installation>
+
+<https://mattyan.net/blog/?p=2132>
