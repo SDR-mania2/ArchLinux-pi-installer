@@ -79,7 +79,7 @@ echo "pacman -Syuを実行してください"
 #timedatectl set-timezone Asia/Tokyo
 #
 #(3)ロケール変更(LXDEメニューが日本語になります)
-#/etc/locale.confにLANG=ja_JP.UTF-8を書く。
+#/etc/locale.confにLANG=ja_JP.UTF-8を追加。
 #
 #(4)日本語フォントのインストール
 #pacman -S otf-ipafont
@@ -88,7 +88,7 @@ echo "pacman -Syuを実行してください"
 #pacman -S fcitx-im fcitx-configtool fcitx-mozc
 #
 #(6).xprofile作成
-#.xprofileを作成しfcitx設定を記述する
+#.xprofileを作成しfcitxの設定を記述する。
 #書き方はいろんなサイトに書いてあります。
 #
 #
