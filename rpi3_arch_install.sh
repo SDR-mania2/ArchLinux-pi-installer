@@ -88,7 +88,7 @@ echo "pacman -Syuを実行してください"
 #pacman -S fcitx-im fcitx-configtool fcitx-mozc
 #
 #(6).xprofile作成
-#.xprofileを作成しfcitxの設定を記述する。
+#~/.xprofileを作成しfcitxの設定を記述する。
 #書き方はいろんなサイトに書いてあります。
 #
 #
