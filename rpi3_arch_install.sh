@@ -41,7 +41,8 @@ then
   echo "bsdtarに失敗しました。"#通常ここで止まるはずです。bsdtarコマンドはRaspbianに入ってません。インストールする必要があります。
   echo "bsdtarをインストールします。"
   apt-get install bsdtar
-  bsdtar -xpf ArchLinuxARM-rpi-2-latest.tar.gz -C root#再度実行
+  #再度実行
+  bsdtar -xpf ArchLinuxARM-rpi-2-latest.tar.gz -C root
   #ここで以下のようなエラーが出て停止します。
   #bsdtar: Error exit delayed from previous errors.
   #しかし無視して続行します。
@@ -59,6 +60,7 @@ umount boot root
 #ブートします。初期ユーザはalarm(パスワードalarm)とroot(パスワードroot)です。
 #初期ユーザのパスワードは変更しておきましょう。
 #ログイン後に以下を実行します。
+echo "ラズパイにSDカードをセットして起動してください"
 echo "pacman-key --initを実行してください"
 echo "pacman-key --populate archlinuxarmを実行してください"
 echo "pacman -Syuを実行してください"
