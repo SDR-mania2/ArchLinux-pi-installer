@@ -41,16 +41,15 @@ then
   echo "bsdtarに失敗しました。"#通常ここで止まるはずです。bsdtarコマンドはRaspbianに入ってません。インストールする必要があります。
   echo "bsdtarをインストールします。"
   apt-get install bsdtar
-else
-#再度実行
-bsdtar -xpf ArchLinuxARM-rpi-2-latest.tar.gz -C root
-#ここで以下のようなエラーが出て停止します。
-#bsdtar: Error exit delayed from previous errors.
-#しかし無視して続行します。
-#GNUのtarでもいけるという情報がありますが、検証してません。bsdtarとGNUtarの違いに詳しくないので現時点では何ともいえません。
-#無視して続行してもインストールは可能です。
-#
+  bsdtar -xpf ArchLinuxARM-rpi-2-latest.tar.gz -C root#再度実行
+  #ここで以下のようなエラーが出て停止します。
+  #bsdtar: Error exit delayed from previous errors.
+  #しかし無視して続行します。
+  #GNUのtarでもいけるという情報がありますが、検証してません。bsdtarとGNUtarの違いに詳しくないので現時点では何ともいえません。
+  #無視して続行してもインストールは可能です。
+  #
 
+else
 sync
 mv root/boot/* boot
 umount boot root
