@@ -63,7 +63,11 @@ fi
 #ブートします。初期ユーザはalarm(パスワードalarm)とroot(パスワードroot)です。
 #初期ユーザのパスワードは変更しておきましょう。
 #ログイン後に以下を実行します。
-trap "echo 'ラズパイにSDカードをセットして起動してください\n pacman-key --initを実行してください\n pacman-key --populate archlinuxarmを実行してください\n pacman -Syuを実行してください'
+trap "
+  echo 'ラズパイにSDカードをセットして起動してください'
+  echo 'pacman-key --initを実行してください'
+  echo 'pacman-key --populate archlinuxarmを実行してください'
+  echo 'pacman -Syuを実行してください'
 "EXIT
 #これを実行しないとpacmanが使えません。
 
