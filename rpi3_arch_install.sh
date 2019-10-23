@@ -34,11 +34,14 @@ mkdir root
 mount /dev/sda2 root
 
 wget http://os.archlinuxarm.org/os/ArchLinuxARM-rpi-2-latest.tar.gz
+
 bsdtar -xpf ArchLinuxARM-rpi-2-latest.tar.gz -C root
-
-#通常ここで止まるはずです。bsdtarコマンドはRaspbianに入ってません。インストールする必要があります。
-apt-get install bsdtar
-
+if [ $? -ne 0 ]
+then
+  echo "bsdtarに失敗しました。"#通常ここで止まるはずです。bsdtarコマンドはRaspbianに入ってません。インストールする必要があります。
+  echo "bsdtarをインストールします。"
+  apt-get install bsdtar
+else
 #再度実行
 bsdtar -xpf ArchLinuxARM-rpi-2-latest.tar.gz -C root
 #ここで以下のようなエラーが出て停止します。
@@ -61,6 +64,7 @@ echo "pacman-key --initを実行してください"
 echo "pacman-key --populate archlinuxarmを実行してください"
 echo "pacman -Syuを実行してください"
 #これを実行しないとpacmanが使えません。
+fi
 
 #続いてLXDEをインストールします。
 #pacman -S xf86-video-fbdev lxde xorg-xinit dbus
