@@ -67,19 +67,18 @@ else
   umount boot root
 fi
 
+trap 'echo finished!!' EXIT
+
 #インストールは以上で完了です。
 #カードリーダーを取り外し、ラズパイにSDカードをセットします。
 #ブートします。初期ユーザはalarm(パスワードalarm)とroot(パスワードroot)です。
 #初期ユーザのパスワードは変更しておきましょう。
 #ログイン後に以下を実行します。
-trap "
-  echo 'ラズパイにSDカードをセットして起動してください'
-  echo 'pacman-key --initを実行してください'
-  echo 'pacman-key --populate archlinuxarmを実行してください'
-  echo 'pacman -Syuを実行してください'
-"EXIT
+#pacman-key --init
+#pacman-key --populate archlinuxarm
+#pacman -Syu
 #これを実行しないとpacmanが使えません。
-
+#
 #続いてLXDEをインストールします。
 #pacman -S xf86-video-fbdev lxde xorg-xinit dbus
 #パッケージの選択などいくつか質問されますが、全てEnterかyを入力します。
