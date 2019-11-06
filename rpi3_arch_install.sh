@@ -15,7 +15,7 @@
 #pacman -S parted dosfstools wget
 #を実行してインストールしてください。
 #bsdtarは最初から入ってますが、「bsdtar:Failed to set default locale」とエラーになるときは、 
-#「#LANG=en_us.UTF=8 pi3_arch_install.sh」と強制的にロケールを設定して実行するとうまくいくようです。
+#「#LANG=en_US.UTF-8 pi3_arch_install.sh」と強制的にロケールを設定して実行するとうまくいくようです。
 #
 
 echo "現在のディスク情報を表示します。"
