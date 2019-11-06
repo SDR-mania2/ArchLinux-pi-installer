@@ -7,6 +7,15 @@
 #RaspbianでSDカードをつなぐと/dev/sdaと認識されるはずです。
 #以下では/dev/sdaと決め打ちで実行します。変更した場合は適宜変更してください。
 #インストールイメージは32bit環境を使用しました。
+#動かないときは「#chmod 777 rpi3_arch_install.sh」などとして実行権をつけてみてください。
+#
+#Raspberry Pi 3B+に入れたArch Linux ARMで動作確認しました。
+#基本的にはRaspbianと同じです。
+#しかし素の状態では何も入ってないので、
+#pacman -S parted dosfstools wget
+#を実行してインストールしてください。
+#bsdtarは最初から入ってますが、「bsdtar:Failed to set default locale」とエラーになるときは、 
+#「#LANG=en_us.UTF=8 pi3_arch_install.sh」と強制的にロケールを設定して実行するとうまくいくようです。
 #
 
 echo "現在のディスク情報を表示します。"
