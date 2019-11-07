@@ -1,6 +1,6 @@
 # ArchLinux-pi-installer
 
-## raspberry pi 3B+へのArch Linuxインストールスクリプト
+## Raspberry Pi 3B+へのArch Linuxインストールスクリプト
 
 ラズパイ上のRaspbianまたはArch Linux ARMからマイクロSDカードにインストールします。
 
