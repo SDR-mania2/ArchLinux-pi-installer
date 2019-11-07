@@ -1,10 +1,10 @@
-# ArchLinux-rpi3-install
+# ArchLinux-pi-installer
 
 ## raspberry pi 3B+へのArch Linuxインストールスクリプト
 
-テスト中です。rpi3_arch_install.shをrootで実行してください。LXDE環境もインストールします。
+ラズパイ上のRaspbianまたはArch Linux ARMからマイクロSDカードにインストールします。
 
-まだ動作の保証はできません。
+rpi3_arch_install.shをrootで実行してください。LXDE環境のインストールについてはコメントを見てください。
 
 参考にしたサイト
 
