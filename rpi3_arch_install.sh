@@ -47,10 +47,10 @@ mount /dev/sda2 root
 
 wget http://os.archlinuxarm.org/os/ArchLinuxARM-rpi-2-latest.tar.gz
 
-bsdtar -xpf ArchLinuxARM-rpi-2-latest.tar.gz -C root
+bsdtar --version
 if [ $? -ne 0 ]
 then
-  echo "bsdtarに失敗しました。"#通常ここで止まるはずです。bsdtarコマンドはRaspbianに入ってません。インストールする必要があります。
+  echo "bsdtarがインストールされていません。" #通常ここで止まるはずです。bsdtarコマンドはRaspbianに入ってません。インストールする必要があります。
   echo "bsdtarをインストールします。"
   apt-get install -y bsdtar
   #再度実行
@@ -65,6 +65,7 @@ then
   mv root/boot/* boot
   umount boot root
 else
+  bsdtar -xpf ArchLinuxARM-rpi-2-latest.tar.gz -C root
   sync
   mv root/boot/* boot
   umount boot root
