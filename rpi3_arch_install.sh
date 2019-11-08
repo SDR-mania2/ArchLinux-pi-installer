@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #
-#Stretchで動作検証しました。Busterでも動くと思われます
+#StretchとBusterで動作検証しました。
 #Raspberry Pi 3B+上のRaspbianからSDカードに書き込みます。ラズパイ3B+にカードリーダーをセットしてください。
 #例によってトラップだらけです。初心者には厳しいでしょう。
 #RaspbianでSDカードをつなぐと/dev/sdaと認識されるはずです。
@@ -55,11 +55,11 @@ then
   sudo apt-get install -y bsdtar
   #再度実行
   bsdtar -xpf ArchLinuxARM-rpi-2-latest.tar.gz -C root
-  #ここで以下のようなエラーが出て停止します。
+  #Stretchでは以下のようなエラーが出て停止します。bsdtarのバージョンが古いからです。
   #bsdtar: Error exit delayed from previous errors.
   #しかし無視して続行します。
   #GNUのtarでもいけるという情報がありますが、検証してません。bsdtarとGNUtarの違いに詳しくないので現時点では何ともいえません。
-  #無視して続行してもインストールは可能です。
+  #無視して続行してもインストールは可能です。Busterではバージョンが新しいためエラーは出ません。
   #
   sync
   mv root/boot/* boot
