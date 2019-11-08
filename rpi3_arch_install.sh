@@ -53,7 +53,6 @@ then
   echo "bsdtarがインストールされていません。" #通常ここで止まるはずです。bsdtarコマンドはRaspbianに入ってません。インストールする必要があります。
   echo "bsdtarをインストールします。"
   sudo apt-get install -y bsdtar
-  #再度実行
   bsdtar -xpf ArchLinuxARM-rpi-2-latest.tar.gz -C root
   #Stretchでは以下のようなエラーが出て停止します。bsdtarのバージョンが古いからです。
   #bsdtar: Error exit delayed from previous errors.
