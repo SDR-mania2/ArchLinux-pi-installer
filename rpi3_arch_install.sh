@@ -52,7 +52,7 @@ if [ $? -ne 0 ]
 then
   echo "bsdtarがインストールされていません。" #通常ここで止まるはずです。bsdtarコマンドはRaspbianに入ってません。インストールする必要があります。
   echo "bsdtarをインストールします。"
-  apt-get install -y bsdtar
+  sudo apt-get install -y bsdtar
   #再度実行
   bsdtar -xpf ArchLinuxARM-rpi-2-latest.tar.gz -C root
   #ここで以下のようなエラーが出て停止します。
