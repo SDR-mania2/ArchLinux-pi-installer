@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #
-#Stretchで動作検証中しました。Busterでも動くと思われます
+#Stretchで動作検証しました。Busterでも動くと思われます
 #Raspberry Pi 3B+上のRaspbianからSDカードに書き込みます。ラズパイ3B+にカードリーダーをセットしてください。
 #例によってトラップだらけです。初心者には厳しいでしょう。
 #RaspbianでSDカードをつなぐと/dev/sdaと認識されるはずです。
