@@ -12,3 +12,8 @@ hdmi_cvt=1024 600 60 6
 dtparam=audio=on
 # use "alsamixer" command to control volume!
 # alsamixerと入力するだけで音量調節可能。
+
+#turn wifi and bluetooth off
+dtoverlay=pi3-disable-wifi  
+dtoverlay=pi3-disable-bt
+
