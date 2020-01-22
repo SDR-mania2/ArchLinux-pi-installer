@@ -17,3 +17,5 @@ dtparam=audio=on
 dtoverlay=pi3-disable-wifi  
 dtoverlay=pi3-disable-bt
 
+# Firefoxを使うとスマホ用サイトにとばされたり、問題が発生します。
+# 対策はIssueに書いたので参考にしてください。
