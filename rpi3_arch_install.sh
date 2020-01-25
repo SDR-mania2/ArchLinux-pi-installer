@@ -93,25 +93,36 @@ trap 'echo finished!!' EXIT
 
 #
 #
-#以下はLXDEの日本語環境設定です。
-#(1)キーマップ変更
-#loadkeys jp106
+# 以下はLXDEの日本語環境設定です。
+# (1)キーマップ変更
+# loadkeys jp106
 #
-#(2)タイムゾーン設定
-#timedatectl set-timezone Asia/Tokyo
+# (2)タイムゾーン設定
+# timedatectl set-timezone Asia/Tokyo
 #
-#(3)ロケール変更(LXDEメニューが日本語になります)
-#/etc/locale.confにLANG=ja_JP.UTF-8を追加。
+# (3)ロケール変更(LXDEメニューが日本語になります)
+# /etc/locale.confにLANG=ja_JP.UTF-8を追加。
 #
-#(4)日本語フォントのインストール
-#pacman -S otf-ipafont
+# (4)日本語フォントのインストール
+# pacman -S otf-ipafont
 #
-#(5)mozcのインストール
-#pacman -S fcitx-im fcitx-configtool fcitx-mozc
+# (5)mozcのインストール
+# pacman -S fcitx-im fcitx-configtool fcitx-mozc
 #
-#(6).xprofile作成
-#~/.xprofileを作成しfcitxの設定を記述する。
-#書き方はいろんなサイトに書いてあります。
-#この後GUI画面でさらに設定する必要があります。
+# (6).xprofile作成
+# ~/.xprofileを作成しfcitxの設定を記述する。
+# 書き方はいろんなサイトに書いてあります。
+# この後GUI画面でさらに設定する必要があります。
+#
+# (7)その他の設定
+# あると便利なもの。
+# pacman -S gufw leafpad scrot
+# firefox使うなら、フォントを追加しないと一部文字化けする。
+# pacman -S firefox-i18n-ja
+# pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji
+# paccacheはあると便利。
+# pacman -S pacman-contrib
 #
 #
+
+
