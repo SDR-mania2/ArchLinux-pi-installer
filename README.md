@@ -19,3 +19,5 @@ rpi3_arch_install.shをrootで実行してください。LXDE環境のインス�
 <http://www.nspl.co.jp/blog/archlinux_installation>
 
 <https://mattyan.net/blog/?p=2132>
+
+<https://solist.work/blog/posts/pacman/>
