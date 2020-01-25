@@ -1,28 +1,28 @@
 #!/bin/bash
 
 #
-#StretchとBusterで動作検証しました。
-#Raspberry Pi 3B+上のRaspbianからSDカードに書き込みます。ラズパイ3B+にカードリーダーをセットしてください。
-#例によってトラップだらけです。初心者には厳しいでしょう。
-#RaspbianでSDカードをつなぐと/dev/sdaと認識されるはずです。
-#以下では/dev/sdaと決め打ちで実行します。変更した場合は適宜変更してください。
-#インストールイメージは32bit環境を使用しました。
-#動かないときは「#chmod 777 rpi3_arch_install.sh」などとして実行権をつけてみてください。
+# StretchとBusterで動作検証しました。
+# Raspberry Pi 3B+上のRaspbianからSDカードに書き込みます。ラズパイ3B+にカードリーダーをセットしてください。
+# 例によってトラップだらけです。初心者には厳しいでしょう。
+# RaspbianでSDカードをつなぐと/dev/sdaと認識されるはずです。
+# 以下では/dev/sdaと決め打ちで実行します。変更した場合は適宜変更してください。
+# インストールイメージは32bit環境を使用しました。
+# 動かないときは「#chmod 777 rpi3_arch_install.sh」などとして実行権をつけてみてください。
 #
-#Raspberry Pi 3B+に入れたArch Linux ARMで動作確認しました。
-#基本的にはRaspbianと同じです。
-#しかし素の状態では何も入ってないので、
-#pacman -S parted dosfstools wget
-#を実行してインストールしてください。
-#bsdtarは最初から入ってますが、「bsdtar:Failed to set default locale」とエラーになるときは、 
+# Raspberry Pi 3B+に入れたArch Linux ARMで動作確認しました。
+# 基本的にはRaspbianと同じです。
+# しかし素の状態では何も入ってないので、
+# pacman -S parted dosfstools wget
+# を実行してインストールしてください。
+# bsdtarは最初から入ってますが、「bsdtar:Failed to set default locale」とエラーになるときは、 
 #「#LANG=en_US.UTF-8 pi3_arch_install.sh」と強制的にロケールを設定して実行するとうまくいくようです。
 #
 
 echo "現在のディスク情報を表示します。"
 fdisk -l
 
-#ホームディレクトリで作業する。絶対に/ディレクトリでは作業しないこと。
-#/で作業した場合、タイプミスすると起動しなくなる可能性があります。
+# ホームディレクトリで作業する。絶対に/ディレクトリでは作業しないこと。
+# /で作業した場合、タイプミスすると起動しなくなる可能性があります。
 cd
 rmdir boot
 rmdir root
@@ -54,11 +54,11 @@ then
   echo "bsdtarをインストールします。"
   sudo apt-get install -y bsdtar
   bsdtar -xpf ArchLinuxARM-rpi-2-latest.tar.gz -C root
-  #Stretchでは以下のようなエラーが出て停止します。bsdtarのバージョンが古いからです。
-  #bsdtar: Error exit delayed from previous errors.
-  #しかし無視して続行します。
-  #GNUのtarでもいけるという情報がありますが、検証してません。bsdtarとGNUtarの違いに詳しくないので現時点では何ともいえません。
-  #無視して続行してもインストールは可能です。Busterではバージョンが新しいためエラーは出ません。
+  # Stretchでは以下のようなエラーが出て停止します。bsdtarのバージョンが古いからです。
+  # bsdtar: Error exit delayed from previous errors.
+  # しかし無視して続行します。
+  # GNUのtarでもいけるという情報がありますが、検証してません。bsdtarとGNUtarの違いに詳しくないので現時点では何ともいえません。
+  # 無視して続行してもインストールは可能です。Busterではバージョンが新しいためエラーは出ません。
   #
   sync
   mv root/boot/* boot
@@ -72,24 +72,24 @@ fi
 
 trap 'echo finished!!' EXIT
 
-#インストールは以上で完了です。
-#カードリーダーを取り外し、ラズパイにSDカードをセットします。
-#ブートします。初期ユーザはalarm(パスワードalarm)とroot(パスワードroot)です。
-#初期ユーザのパスワードは変更しておきましょう。
-#ログイン後に以下を実行します。
-#pacman-key --init
-#pacman-key --populate archlinuxarm
-#pacman -Syu
-#これを実行しないとpacmanが使えません。
+# インストールは以上で完了です。
+# カードリーダーを取り外し、ラズパイにSDカードをセットします。
+# ブートします。初期ユーザはalarm(パスワードalarm)とroot(パスワードroot)です。
+# 初期ユーザのパスワードは変更しておきましょう。
+# ログイン後に以下を実行します。
+# pacman-key --init
+# pacman-key --populate archlinuxarm
+# pacman -Syu
+# これを実行しないとpacmanが使えません。
 #
-#続いてLXDEをインストールします。
-#pacman -S xf86-video-fbdev lxde xorg-xinit dbus
-#パッケージの選択などいくつか質問されますが、全てEnterかyを入力します。
-#ホームディレクトリに.xinitrcを作成します。
-#echo "exec startlxde" > ~/.xinitrc
-#リブートします。
+# 続いてLXDEをインストールします。
+# pacman -S xf86-video-fbdev lxde xorg-xinit dbus
+# パッケージの選択などいくつか質問されますが、全てEnterかyを入力します。
+# ホームディレクトリに.xinitrcを作成します。
+# echo "exec startlxde" > ~/.xinitrc
+# リブートします。
 
-#リブート後ログインしてstartxすればLXDEが起動します。
+# リブート後ログインしてstartxすればLXDEが起動します。
 
 #
 #
@@ -124,5 +124,4 @@ trap 'echo finished!!' EXIT
 # pacman -S pacman-contrib
 #
 #
-
 
