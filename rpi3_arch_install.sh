@@ -101,7 +101,11 @@ trap 'echo finished!!' EXIT
 # timedatectl set-timezone Asia/Tokyo
 #
 # (3)ロケール変更(LXDEメニューが日本語になります)
+# まずlocale-gen を実行。
 # /etc/locale.confにLANG=ja_JP.UTF-8を追加。
+# ~/.config/locale.conf がなければコピーする。
+# 念のため chown もしておく。
+# mozc を入れる前にやっておかないとはまります。
 #
 # (4)日本語フォントのインストール
 # pacman -S otf-ipafont
@@ -113,6 +117,8 @@ trap 'echo finished!!' EXIT
 # ~/.xprofileを作成しfcitxの設定を記述する。
 # 書き方はいろんなサイトに書いてあります。
 # この後GUI画面でさらに設定する必要があります。
+# うまくいかないときは .xinitrc に書く方法もあります。
+# ArchWikiのmozcやfcitxなどを見てください。
 #
 # (7)その他の設定
 # あると便利なもの。
