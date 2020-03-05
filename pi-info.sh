@@ -1,7 +1,9 @@
 #!/bin/sh
-
-# kairyou sita  script!
-
+# コマンド打つのが面倒になって作ったシェルスクリプトです。 
+# 実行後archかraspbianを入力すると、コアダンプ情報を表示します。
+# 次にjournalctlでログを表示して、qを押すとCPU温度とCPU周波数を5秒間隔で表示します。
+# CPU周波数は4コアすべて表示します。
+# 終了はCtl-cでお願いします。Archでしか動作検証していませんが、多分Busterでも動くはず。
 
 
 print_temp () {
