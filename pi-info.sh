@@ -45,6 +45,11 @@ journalctl -e
 # journalctl -u ufw
 # journalctl -u sshd
 
+# ulimit -m 921000
+# ulimitでメモリ使用量を制限します。921000kBで約900MBです。
+# これを超えるとブラウザ等は終了します。コアダンプしますが端末は落ちません。
+# ulimitは端末で直接実行するか、.bashrcに書かないと機能しません。
+# ulimit -a
 
 while [ true ];
 
