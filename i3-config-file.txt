@@ -1,3 +1,8 @@
+#
+# a part of ~/.config/i3/config
+#
+
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
