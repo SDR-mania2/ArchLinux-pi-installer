@@ -1,0 +1,12 @@
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# start a terminal
+#bindsym $mod+Return exec i3-sensible-terminal
+#bindsym $mod+Return exec urxvt -fg white -bg black
+bindsym $mod+Return exec urxvtc -fn "xft:monospace-9" -fg white -bg black
+
+#bg color
+#after 'pacman -S  xorg-xsetroot'
+#exec --no-startup-id xsetroot -solid "#003333"
+
