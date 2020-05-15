@@ -1,0 +1,12 @@
+#
+# ~/.xinitrc
+#
+
+#xsetroot -solid "#006666"
+#feh --bg-scale /usr/share/backgrounds/archlinux/archlinux-underground.jpg &
+feh --bg-scale my-wall-paper.jpg &
+
+urxvtd --quiet --fork --opendisplay &
+
+exec i3
+
