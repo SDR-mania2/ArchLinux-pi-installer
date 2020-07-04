@@ -8,8 +8,10 @@
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
-ulimit -m 921000
-# 7346 -> 512
-ulimit -u 512
-ulimit -n 512
+ulimit -m 1536000
+# 921000 -> 1228000 -> 1536000
+
+# 7346 -> 512 -> 2048
+ulimit -u 2048
+ulimit -n 2048
 
