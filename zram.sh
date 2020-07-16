@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# Arch Wiki からのコピーです
+# Arch Wiki からのコピーです。on/offを入力してください。
 # 実行時にsudoをつける!
 # 固まったらCtrl+Alt+F2 -> pkill -9 firefox -> pkill -9 i3
 # -> pkill xinit -> poweroff
