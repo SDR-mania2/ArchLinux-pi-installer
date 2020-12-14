@@ -6,16 +6,16 @@ initramfs initramfs-linux.img followkernel
 
 
 # DMT custom mode
-#hdmi_group=2
-#hdmi_mode=87
-#hdmi_drive=2
-#hdmi_cvt=1024 600 60 6
+# hdmi_group=2
+# hdmi_mode=87
+# hdmi_drive=2
+# hdmi_cvt=1024 600 60 6
 
 # DMT normal mode
 hdmi_group=2
-#hdmi_mode=9
+# hdmi_mode=9
 hdmi_mode=16
-#hdmi_mode=23
+# hdmi_mode=23
 hdmi_drive=2
 
 
@@ -24,7 +24,7 @@ dtparam=audio=on
 # use "alsamixer" command to control volume!
 # alsamixerと入力するだけで音量調節可能。
 
-#turn wifi and bluetooth off
+# turn wifi and bluetooth off
 dtoverlay=pi3-disable-wifi  
 dtoverlay=pi3-disable-bt
 
