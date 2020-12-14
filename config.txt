@@ -11,7 +11,7 @@ initramfs initramfs-linux.img followkernel
 #hdmi_drive=2
 #hdmi_cvt=1024 600 60 6
 
-# normal DMT mode
+# DMT normal mode
 hdmi_group=2
 #hdmi_mode=9
 hdmi_mode=16
