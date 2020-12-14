@@ -5,10 +5,19 @@ gpu_mem=64
 initramfs initramfs-linux.img followkernel
 
 
+# DMT custom mode
+#hdmi_group=2
+#hdmi_mode=87
+#hdmi_drive=2
+#hdmi_cvt=1024 600 60 6
+
+# normal DMT mode
 hdmi_group=2
-hdmi_mode=87
+#hdmi_mode=9
+hdmi_mode=16
+#hdmi_mode=23
 hdmi_drive=2
-hdmi_cvt=1024 600 60 6
+
 
 # ALSA設定
 dtparam=audio=on
@@ -22,3 +31,4 @@ dtoverlay=pi3-disable-bt
 # Firefoxを使うとスマホ用サイトにとばされたり、問題が発生します。
 # 対策はIssueに書いたので参考にしてください。
 # fsckの使い方もIssueに書きました。
+
